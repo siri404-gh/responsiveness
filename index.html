@@ -1,0 +1,88 @@
+<!doctype html>
+<head>
+    <link rel='stylesheet' href='css.css'/>
+    <script>
+	window.onload = function () {
+    var btn = document.getElementById('modal_btn');
+    var modal = document.getElementById('myModal');
+    var close = document.getElementById('close');
+    btn.onclick = function() {
+    	console.log("clicked")
+        modal.style.display = "block";
+    }
+    close.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    document.addEventListener('keyup', function(e) {
+        if (e.keyCode == 27) {
+        	 modal.style.display = "none";
+        }
+    });
+};
+</script>
+</head>
+<body>
+    <div class='container'>
+        <header>
+        </header>
+        <div class='content'>
+            <div class='left'>
+                <div class="ad_blocker" id="modal_btn">
+                    Ad Blockers: Setback or Spark for Innovation?
+                </div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close" id="close">X</span>
+                            <h2>Ad Blockers: Setback or Spark for Innovation?</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>In 2015, the industry lost a staggering $22 billion in revenue due to ad blockers.
+                            Publishers are lamenting their losses.
+                            But if users are annoyed enough at ads that they want to block them,
+                            shouldn't advertisers be doing something different?</p>
+                            <p>This rough downturn could be the spark the industry needs to disrupt the old paradigms
+                             and create innovative ads for a new digital landscape.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <h4 align=right>Continue Reading..</h4>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class='right'>
+                <div class='abs'>
+                    <div class='bottom'>
+                        <div class='box box1'>
+                            <div class='inner-box'>
+                                <p>The real reasons why making money with online media is hard.</p>
+                            </div>
+                            <div class='inner-box-img'>
+                            </div>
+                        </div>
+                        <div class='box box2'>
+                            <div class='inner-box'>
+                                <p>How Motherly Uses Personalization to Create Engagement.</p>
+                            </div>
+                            <div class='inner-box-img'>
+                            </div>
+                        </div>
+                        <div class='box box3'>
+                            <div class='inner-box'>
+                                <p>Fixing email overload, and now chat overload, for content teams.</p>
+                            </div>
+                            <div class='inner-box-img'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
